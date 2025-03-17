@@ -1,0 +1,17 @@
+####### Certaines lignes ont été modifiées pour le niveau suivant sans garantie de fonctionnements, le jeu.jar est fonctionnel (sans l'option de rejouer)
+
+Classe Joueur:
+/ Modification de la documentation
+/ Modification des attributs
+/ Modification des méthodes
+
+Classe Niveau:
++ Ajout de commentaires
+/ Modification de la documentation
+/ Modification des constructeurs
+
+Classe TouchesDirectionnelles:
+/ Modification de la documentation
+
+Classe IndiceHorsLimitesException:
+/ Modification de la documentation
