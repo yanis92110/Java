@@ -1,9 +1,8 @@
 package game;
 //import java.nio.file.Paths;
-import java.util.Scanner;
 import java.io.IOException;
-//import java.nio.file.Path;
 import java.util.AbstractMap;
+import java.util.Scanner;
 
 
 public class Cliente {
@@ -24,6 +23,8 @@ public class Cliente {
 		int j=0;
 		Niveau niveau1 = new Niveau(j0);
 		Jeu jeu = new Jeu(args,j0);
+		//le jeu est créer, on appelle mtn partie pour jouer
+		jeu.partie();
 		
 
         
