@@ -9,14 +9,14 @@ import javax.swing.JFrame;
  **/
 public class TouchesDirectionnelles extends JFrame implements KeyListener {
 		private static final long serialVersionUID = 1L; //Pour éviter un Warning
-		private Niveau niv;
+		private Niveau niveau;
 		/**
 		 * Constructeur qui prend en paramètre un Joueur et un Niveau, qui lance une fenetre pour récupérer les saisies utilisateur
 		 * @param Joueur joueur
 		 * @param Niveau niveau
 		 **/
 	    public TouchesDirectionnelles(Joueur joueur, Niveau niveau) {
-	    	this.niv=niveau;
+	    	this.niveau=niveau;
 	    	//Titre de la fenetre
 	        setTitle("Minecraft");
 	        //Taille de la fenetre
@@ -36,6 +36,12 @@ public class TouchesDirectionnelles extends JFrame implements KeyListener {
 	        }
 
 	    }
+		public void Deplacement(Direction deplacement){
+			Joueur joueur = this.niveau.getJoueur();
+			
+			int xPrecedent=this.niveau.getJoueur().getx();
+			int yPrecedent=this.joueur.gety();
+		}
 		/**
 		 * Réécriture de la méthode keyTyped pour déplacer le joueur quand une touche est pressée (ZQSD), ou fermer la fenetre avec PBEKey
 		 * @param KeyEvent e
@@ -48,16 +54,16 @@ public class TouchesDirectionnelles extends JFrame implements KeyListener {
 	        //Déplacement en fonction de la touche tapée (ZQSD)  P Pour quitter
 	        switch(e.getKeyChar()) {
 	        	case 'z':
-	        		niv.Deplacement(Direction.NORD);
+	        		niveau.Deplacement(Direction.NORD);
 	        		break;
 	        	case 'q':
-	        		niv.Deplacement(Direction.OUEST);
+	        		niveau.Deplacement(Direction.OUEST);
 	        		break;
 	        	case 's':
-	        		niv.Deplacement(Direction.SUD);
+	        		niveau.Deplacement(Direction.SUD);
 	        		break;
 	        	case 'd':
-	        		niv.Deplacement(Direction.EST);
+	        		niveau.Deplacement(Direction.EST);
 	        		break;
 	        	case 'p':
 	        		System.out.println("Ciao !");
@@ -66,8 +72,8 @@ public class TouchesDirectionnelles extends JFrame implements KeyListener {
 	        	default:
 	        		//TODO
 	        }
-	        System.out.println(niv);
-	        if(niv.niveauTermine() || Cliente.gameOver) { //Si le niveau est fini ou si on recommence un niveau, on ferme la fenetre
+	        System.out.println(niveau);
+	        if(niveau.niveauTermine() || Cliente.gameOver) { //Si le niveau est fini ou si on recommence un niveau, on ferme la fenetre
 	        	dispose();
 	        }
 	    }

@@ -12,7 +12,7 @@ public class Jeu {
 	 * @param j Joueur
 	 */
 	public Jeu(String[] args,Joueur j) {
-		Niveau[] liste_niveaux = new Niveau[args.length]; // Tableau de 5 objets de type MaClasse
+		Niveau[] liste_niveaux = new Niveau[args.length]; // Tableau de args.lenght objets de type Niveau
 
 		for(int i=0;i<args.length;i++) {
 			
@@ -29,7 +29,7 @@ public class Jeu {
 		return this.liste_niveaux;
 	}
 	/**
-	 * Méthode qui renvoie le niveau *indice*
+	 * Méthode qui renvoie le niveau N° indice
 	 * @param indice Numéro de niveau
 	 * @return liste_niveaux[indice] Niveau N°indice
 	 */

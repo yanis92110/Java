@@ -42,6 +42,11 @@ public class Niveau {
 	public void setPositionInitiale(AbstractMap.SimpleEntry<Integer,Integer> tuple) {
 		this.position = tuple;
 	}
+	/**
+	 * Constructeur qui prend un tableau de tableau de caracteres et un joueur et les associe aux attributs de la classe
+	 * @param tab Tableau 2D de caracteres
+	 * @param j Joueur du niveau 
+	 */
 	public Niveau(char[][] tab,Joueur j) {
 		tableau = tab;
 		joueur = j;
@@ -341,6 +346,13 @@ public class Niveau {
 		return this.estTermine;
 	}
 	/**
+	 * Méthode qui renvoie le joueur dans le niveau
+	 * @return joueur
+	 */
+	public Joueur getJoueur(){
+		return this.joueur;
+	}
+	/**
 	 * Méthode qui prend en parametre un tableau de tableau de caracteres et l'assigne en tant que niveau
 	 * @param tab Tableau qui represente un niveau
 	 */
@@ -354,8 +366,7 @@ public class Niveau {
 	**/
 	public void Deplacement(Direction deplacement) {
 		//On garde les anciennes positions au cas ou le déplacement serait illégitime
-		int xPrecedent=this.joueur.getx();
-		int yPrecedent=this.joueur.gety();
+		
 		//Change les positions en fonction de la direction
 		switch(deplacement) {
 			case NORD:

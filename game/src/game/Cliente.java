@@ -23,6 +23,8 @@ public class Cliente {
         Joueur j0= new Joueur(pseudo);
 		int j=0;
 		Niveau niveau1 = new Niveau(j0);
+		Jeu jeu = new Jeu(args,j0);
+		
 
         
 		while(continuer) {
